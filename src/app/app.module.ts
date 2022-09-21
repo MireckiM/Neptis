@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RegisterComponent } from './register/register.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
@@ -24,6 +25,7 @@ import { RegisterComponent } from './register/register.component';
     MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
