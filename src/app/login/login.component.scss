@@ -16,6 +16,21 @@
     justify-content: center;
 }
 
+.mat-card-actions {
+    margin: auto;
+    justify-content: center;
+    vertical-align: middle;
+    max-width: 70px;
+}
+
+.mat-card-footer {
+    margin: auto;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .mat-raised-button {
 
     color: rgb(156, 88, 0);
@@ -27,8 +42,4 @@
     text-align: center;
     color: rgb(156, 88, 0);
 
-}
-
-.mat-divider {
-    margin-block: 3%;
 }
