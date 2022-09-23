@@ -9,7 +9,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  successMsg: string = "";
   loginForm!: FormGroup;
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 

@@ -1,21 +1,48 @@
 <div class="container">
     <mat-card class="login-card">
-        <mat-card-title class="title">Rejestracja</mat-card-title>
+        <mat-card-title>Rejestracja</mat-card-title>
+        <mat-divider></mat-divider>
 
-        <mat-card-content class="content">
-            <div>
-                <mat-form-field>
-                    <mat-label>Input</mat-label>
-                    <input matInput>
-                </mat-form-field>
-            </div>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <mat-card-content>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label for="email">Email</mat-label>
+                        <input type="email" formControlName="email" matInput placeholder="">
 
+                        <mat-hint *ngIf="registerForm.controls.email.errors && registerForm.controls.email.touched">
+                            Podaj poprawny email.</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label for="password">Hasło</mat-label>
+                        <input type="password" formControlName="password" matInput placeholder="">
 
-        </mat-card-content>
-        <mat-card-actions>
+                        <mat-hint *ngIf="registerForm.controls.password.errors && registerForm.controls.password.touched">
+                            Podaj poprawne hasło</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="fill">
+                        <mat-label for="password2">Powtórz hasło</mat-label>
+                        <input type="password" formControlName="password2" matInput placeholder="">
 
-            <button class="login-button">Rejestruj</button>
+                        <mat-hint *ngIf="registerForm.controls.password2.errors && registerForm.controls.password2.touched">
+                            Hasła muszą być takie same.</mat-hint>
+                    </mat-form-field>
+                </p>
 
-        </mat-card-actions>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="submit" [disabled]="!registerForm.valid" mat-raised-button>Zarejestruj</button>
+            </mat-card-actions>
+        </form>
+        <mat-card-footer>
+            <a [routerLink]="['../logowanie']">Masz już konto? Zaloguj się.</a>
+        </mat-card-footer>
+
     </mat-card>
+
+
 </div>

@@ -1,22 +1,45 @@
 .login-card {
-    margin-top: 2%;
     display: block;
     margin: auto;
+    margin-top: 3%;
     vertical-align: middle;
     max-width: 400px;
     justify-content: center;
+    background-color: rgb(255, 176, 72);
 }
 
-.login-button {
-    display: block;
+.mat-card-content {
     margin: auto;
+    margin-top: 9%;
+    vertical-align: middle;
+    max-width: 200px;
+    justify-content: center;
 }
 
-.title {
+.mat-card-actions {
+    margin: auto;
+    justify-content: center;
+    vertical-align: middle;
+    max-width: 70px;
+}
+
+.mat-card-footer {
+    margin: auto;
+    justify-content: center;
+    vertical-align: middle;
     text-align: center;
+    margin-top: 20px;
 }
 
-.matInput {
-    display: block;
-    margin: auto;
+.mat-raised-button {
+
+    color: rgb(156, 88, 0);
+    background-color: rgb(255, 201, 130);
+    vertical-align: middle;
+}
+
+.mat-card-title {
+    text-align: center;
+    color: rgb(156, 88, 0);
+
 }
