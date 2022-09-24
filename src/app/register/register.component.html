@@ -19,8 +19,9 @@
                         <mat-label for="password">Hasło</mat-label>
                         <input type="password" formControlName="password" matInput placeholder="">
 
-                        <mat-hint *ngIf="registerForm.controls.password.errors && registerForm.controls.password.touched">
-                            Podaj poprawne hasło</mat-hint>
+                        <mat-hint
+                            *ngIf="registerForm.controls.password.errors && registerForm.controls.password.touched">
+                            Hasło minimum 6 znaków!</mat-hint>
                     </mat-form-field>
                 </p>
                 <p>
@@ -28,10 +29,32 @@
                         <mat-label for="password2">Powtórz hasło</mat-label>
                         <input type="password" formControlName="password2" matInput placeholder="">
 
-                        <mat-hint *ngIf="registerForm.controls.password2.errors && registerForm.controls.password2.touched">
+                        <mat-hint
+                            *ngIf="registerForm.controls.password2.errors && registerForm.controls.password2.touched">
                             Hasła muszą być takie same.</mat-hint>
                     </mat-form-field>
                 </p>
+
+                <p>
+                    <input  type="checkbox" class="form-check-input" />
+                    <label class="form-check-label">Akceptuję wszystkie zgody</label>
+                </p>
+                <p>
+                    <input type="checkbox" class="form-check-input" formControlName="acceptReg" />
+                    <label for="acceptReg" class="form-check-label">*Zapoznałem/am się z Regulaminem</label>
+
+                </p>
+                <p>
+                    <input type="checkbox"  class="form-check-input" formControlName="acceptPriv"/>
+                    <label for="acceptPriv" class="form-check-label">*Zapoznałem/am się z Polityką Prywatności</label>
+                </p>
+                <p>
+                    <input type="checkbox"  class="form-check-input" formControlName="acceptData" />
+                    <label for="acceptData" class="form-check-label">Wyrażam zgodę na przetwarzanie moich danych w
+                        celach marketingowych</label>
+                </p>
+
+
 
             </mat-card-content>
             <mat-card-actions>
@@ -41,7 +64,6 @@
         <mat-card-footer>
             <a [routerLink]="['../logowanie']">Masz już konto? Zaloguj się.</a>
         </mat-card-footer>
-
     </mat-card>
 
 

@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     //console.log(this.loginForm)
-    this.http.post('https://jsonplaceholder.typicode.com/posts/', this.loginForm).subscribe(responseData => { console.log(responseData) },
+    this.http.post('https://jsonplaceholder.typicode.com/posts/', {email: this.fb, password: this.fb}).subscribe(responseData => { console.log(responseData) },
       (error) => { window.alert(error) },
-      () => { window.alert("Zalogowano") }
+      () => { window.alert("Rejestracja przebiegła pomyślnie.") }
     )
   }
 }
