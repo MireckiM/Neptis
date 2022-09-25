@@ -30,7 +30,6 @@
     vertical-align: middle;
     text-align: center;
     margin-top: 20px;
-    font-family: ;
 }
 
 .mat-raised-button {
@@ -44,4 +43,11 @@
     text-align: center;
     color: rgb(156, 88, 0);
 
+}
+@font-face {
+    font-family: poppins;
+    src: url(../../assets/fonts/Poppins-Black.ttf) format("opentype");
+}
+.poppins{
+    font-family: poppins;
 }

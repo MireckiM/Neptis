@@ -40,3 +40,10 @@
     color: rgb(156, 88, 0);
 
 }
+@font-face {
+    font-family: poppins;
+    src: url(../../assets/fonts/Poppins-Black.ttf) format("opentype");
+}
+.poppins{
+    font-family: poppins;
+}

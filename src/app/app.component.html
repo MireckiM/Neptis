@@ -1,11 +1,9 @@
 <div class="container">
-  <p>
-    <mat-toolbar class="toolbar">
-      <img class="png-icon" src="../assets/yanosik-logo-desktop.png" alt="image" style="height: 100%;">
-    </mat-toolbar>
-  </p>
 
-  <router-outlet>
+  <mat-toolbar class="toolbar">
+    <img *ngIf="isMobile()" src="../assets/yanosik-logo-mobile.png" alt="image" style="height: 100%;">
+    <img *ngIf="!isMobile()" src="../assets/yanosik-logo-desktop.png" alt="image" style="height: 100%;">
+  </mat-toolbar>
 
-  </router-outlet>
+  <router-outlet></router-outlet>
 </div>
