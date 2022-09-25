@@ -16,8 +16,8 @@
 .mat-card-actions {
     margin: auto;
     justify-content: center;
-    vertical-align: middle;
-    max-width: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .mat-card-footer {
@@ -28,6 +28,12 @@
     margin-top: 20px;
 }
 
+.mat-card-title {
+    text-align: center;
+    color: rgb(156, 88, 0);
+
+}
+
 .mat-raised-button {
 
     color: rgb(156, 88, 0);
@@ -35,15 +41,12 @@
     vertical-align: middle;
 }
 
-.mat-card-title {
-    text-align: center;
-    color: rgb(156, 88, 0);
 
-}
 @font-face {
     font-family: poppins;
     src: url(../../assets/fonts/Poppins-Black.ttf) format("opentype");
 }
-.poppins{
+
+.poppins {
     font-family: poppins;
 }

@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterComponent implements OnInit {
 
-  public checkAll: boolean = false;
+  //public checkAll: boolean = false;
   registerForm!: FormGroup;
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
@@ -32,6 +32,9 @@ export class RegisterComponent implements OnInit {
     };
   }
 
+  /*onCheckChange() {
+    return this.checkAll = !this.checkAll;
+  }*/
 
 
   ngOnInit(): void {
@@ -51,7 +54,7 @@ export class RegisterComponent implements OnInit {
 
     this.http.post('https://jsonplaceholder.typicode.com/posts/', { email: this.fb, password: this.fb }).subscribe(responseData => { console.log(responseData) },
       (error) => { window.alert(error) },
-      () => { window.alert("Rejestracja przeebiegła pomyślnie") }
+      () => { window.alert("Rejestracja przebiegła pomyślnie") }
     )
   }
 
