@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterComponent implements OnInit {
 
-  //public checkAll: boolean = false;
+  checkAll: boolean = false;
   registerForm!: FormGroup;
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
@@ -32,9 +32,12 @@ export class RegisterComponent implements OnInit {
     };
   }
 
-  /*onCheckChange() {
-    return this.checkAll = !this.checkAll;
-  }*/
+  onCheckChange() {
+    this.checkAll = !this.checkAll,
+      this.registerForm.patchValue({ acceptReg: this.checkAll }),
+      this.registerForm.patchValue({ acceptPriv: this.checkAll }),
+      this.registerForm.patchValue({ acceptData: this.checkAll })
+  }
 
 
   ngOnInit(): void {
